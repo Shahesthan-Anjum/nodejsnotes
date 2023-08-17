@@ -1,0 +1,226 @@
+1-:difference between nodejs and javascript
+JavaScript and Node.js are both important technologies in web development, but they have different purposes. JavaScript is a programming language that is used on the client-side, 
+while Node.js is a runtime environment that is used on the server-side.
+Feature	JavaScript	Node.js
+Purpose	Used on the client-side to create interactive web pages	Used on the server-side to create web applications and other network-based applications
+Programming model	Single-threaded, synchronous	Single-threaded, asynchronous
+I/O model	Blocking	Non-blocking
+Event handling	Event-driven	Event-driven
+Libraries	Large library of modules available in the npm package manager	Smaller library of modules available in the npm package manager
+Applications	Used to create web pages, web applications, and mobile applications	Used to create web applications, real-time applications, and other network-based applications
+Here are some additional things to keep in mind:
+
+Javascript:
+JavaScript is a client-side scripting language, which means that it is executed in the user's browser. Node.js is a server-side runtime environment, which means that it is executed on the server.
+JavaScript is a single-threaded language, which means that it can only execute one task at a time. Node.js is also a single-threaded language, but it uses a technique called event looping to handle multiple concurrent requests.
+JavaScript uses a blocking I/O model, which means that it will wait for an operation to complete before it can start another operation. Node.js uses a non-blocking I/O model, which means that it can start another operation without waiting for the previous operation to complete.
+JavaScript uses an event-driven architecture, which means that it responds to events rather than polling for them. Node.js also uses an event-driven architecture.
+
+2-:what is nodejs explain in details
+Node.js is an open-source, cross-platform runtime environment that enables JavaScript to be used for server-side scripting. Node.js uses an event-driven, non-blocking I/O model that makes it lightweight and efficient, perfect for data-intensive real-time applications.
+
+Here are some of the key features of Node.js:
+
+Asynchronous programming: Node.js uses an asynchronous programming model, which means that it can handle multiple requests at the same time without blocking. This makes it ideal for applications that need to handle a lot of concurrent traffic.
+Event-driven architecture: Node.js uses an event-driven architecture, which means that it responds to events rather than polling for them. This makes it more efficient and responsive.
+Single-threaded: Node.js is a single-threaded application, but it can handle multiple concurrent requests by using a technique called event looping.
+Cross-platform: Node.js is a cross-platform application, which means that it can run on Windows, macOS, Linux, and other operating systems.
+Large library of modules: Node.js has a large library of modules that can be used to extend its functionality. These modules can be found in the npm package manager.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Javascript Programs
+class Dog {
+  constructor(name) {
+    this._name = name;
+    this._behavior = 0;
+  }
+
+  get name() {
+    return this._name;
+  }
+  get behavior() {
+    return this._behavior;
+  }   
+
+  incrementBehavior() {
+    this._behavior ++;
+  }
+}
+
+const halley = new Dog('Halley');
+console.log(halley.name); // Print name value to console
+console.log(halley.behavior); // Print behavior value to console
+halley.incrementBehavior(); // Add one to behavior
+console.log(halley.name); // Print name value to console
+console.log(halley.behavior); // Print behavior value to console
+
+
+class Surgeon {
+  constructor(name, department) {
+    this._name = name;
+    this._department = department;
+    this._remainingVacationDays = 20;
+  }
+  
+  get name() {
+    return this._name;
+  }
+  
+  get department() {
+    return this._department;
+  }
+  
+  get remainingVacationDays() {
+    return this._remainingVacationDays;
+  }
+  
+  takeVacationDays(daysOff) {
+    this._remainingVacationDays -= daysOff;
+  }
+}
+
+const surgeonRomero = new Surgeon('Francisco Romero', 'Cardiovascular');
+const surgeonJackson = new Surgeon('Ruth Jackson', 'Orthopedics');
+we also prepended our property names with underscores (_name and _behavior),
+which indicate these properties should not be accessed directly. Under the getters, we add a method named .incrementBehavior(). When you call .incrementBehavior() on a Dog instance,
+it adds 1 to the _behavior property. Between each of our methods, we did not include commas.
+
+
+Inheritance:
+class HospitalEmployee{
+   constructor(name){
+    this._name=name;
+     this._remainingVacationDays=20;
+   }
+   get name(){
+    return this._name;
+   }
+   get remainingVacationDays(){
+     return this._remainingVacationDays;
+   }
+   takeVacationDays(daysOff){
+    this._remainingVacationDays-=daysOff;
+   }
+}
+class Doctor{
+  constructor(name,insurance){
+    this._name=name;
+   this._insurance=insurance;
+    this._remainingVacationDays=20;
+  }
+  takeVacationDays(){
+  }
+}
+class Nurse{
+  constructor(name,certifications){
+    this._name=name;
+    this._certifications=certifications;
+    this._remainingVacationDays=20;
+  }
+  takeVacationDays(){
+
+  }
+  addCertification(){
+
+  }
+}
+
+
+inheritance
+class HospitalEmployee {
+  constructor(name) {
+    this._name = name;
+    this._remainingVacationDays = 20;
+  }
+  
+  get name() {
+    return this._name;
+  }
+  
+  get remainingVacationDays() {
+    return this._remainingVacationDays;
+  }
+  
+  takeVacationDays(daysOff) {
+    this._remainingVacationDays -= daysOff;
+  }
+
+}
+
+class Nurse extends HospitalEmployee{
+ constructor(name,certifications){
+   super(name);
+    this._certifications=certifications;
+    this._remainingVacationDays=20;
+ }
+
+ takeVacationDays(){
+  }
+  addCertification(){
+  }
+}
+const nurseOlynyk=new Nurse('Olynyk',['Trauma', 'Pediatrics'])
+
+
+
+Push method in inheritance
+class HospitalEmployee {
+  constructor(name) {
+    this._name = name;
+    this._remainingVacationDays = 20;
+  }
+  
+  get name() {
+    return this._name;
+  }
+  
+  get remainingVacationDays() {
+    return this._remainingVacationDays;
+  }
+  
+  takeVacationDays(daysOff) {
+    this._remainingVacationDays -= daysOff;
+  }
+static generatePassword(){
+   const randomNumber= Math.floor(Math.random()*1000)
+   return randomNumber;
+  }
+}
+
+class Nurse extends HospitalEmployee {
+  constructor(name, certifications) {
+    super(name);
+    this._certifications = certifications;
+  } 
+  get certifications(){
+  return  this._certifications;}
+  addCertification(newCertification){
+      this._certifications.push(newCertification);
+
+  }
+}
+
+const nurseOlynyk = new Nurse('Olynyk', ['Trauma','Pediatrics']);
+nurseOlynyk.takeVacationDays(5);
+console.log(nurseOlynyk.remainingVacationDays);
+nurseOlynyk.addCertification('Genetics');
+console.log(nurseOlynyk.certifications);
